@@ -4,18 +4,28 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Run:
 
-### npm install
+## npm install
 
 To install all dependancys.
+
 "bootstrap": "^4.3.1",
+
 "eslint": "^6.3.0",
+
 "markdown-react-js": "^1.0.2",
+
 "react": "^16.9.0",
+
 "react-bootstrap": "^1.0.0-beta.12",
+
 "react-dom": "^16.9.0",
+
 "react-markdown": "^4.2.2",
+
 "react-router": "^5.0.1",
+
 "react-router-dom": "^5.0.1",
+
 "react-scripts": "3.1.1"
 
 ## Available Scripts

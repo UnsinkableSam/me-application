@@ -14,10 +14,9 @@ function One() {
       .then(text => setMarkdown(text));
   });
   return (
-    <div>
+    <div className="reports">
       <a href="https://github.com/UnsinkableSam/me-application">
-        {" "}
-        Github länk{" "}
+        <i class="GithubIcon"></i> Github länk
       </a>
       <ReactMarkdown source={markdown} />
     </div>

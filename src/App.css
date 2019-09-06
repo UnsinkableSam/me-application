@@ -49,11 +49,32 @@ html {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.index {
-  width: 50%;
-}
-
 a {
   color: black;
   font-weight: bold;
+}
+
+.index {
+  height: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.reports {
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 50px 0 rgba(0, 0, 0, 0.19);
+  padding: 5rem;
+}
+
+.GithubIcon {
+  content: url("./assets/GitHub-Mark-64px.png");
+}
+.index div {
+  width: 50%;
+  float: left;
+  height: 300px;
+}
+
+.image {
+  background-image: url("./assets/joshua.png");
+  background-size: cover;
 }

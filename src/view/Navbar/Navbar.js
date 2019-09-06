@@ -11,7 +11,7 @@ function Navbar() {
           <a href="/">Index</a>
         </li>
         <li id="2" className="nav-link">
-          <a href="/1">1</a>
+          <a href="/reports/week/1">Reports</a>
         </li>
       </ul>
     </div>

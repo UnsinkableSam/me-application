@@ -12,7 +12,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Route path="/" exact component={index} />
-        <Route path="/1" component={One} />
+        <Route path="/reports/week/1" component={One} />
       </div>
     </Router>
   );

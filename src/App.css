@@ -71,10 +71,34 @@ a {
 .index div {
   width: 50%;
   float: left;
-  height: 300px;
+  height: 500px;
 }
 
 .image {
   background-image: url("./assets/joshua.png");
   background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (max-width: 1167px) {
+  .App {
+    text-align: center;
+    width: 100%;
+    margin-top: 0%;
+    margin-left: 0%;
+  }
+
+  .index {
+    margin-top: -1.5rem;
+    height: 700px;
+  }
+
+  .index div {
+    width: 100%;
+    float: none;
+  }
+
+  .image {
+    display: none;
+  }
 }

@@ -1,7 +1,6 @@
 .App {
   text-align: center;
   width: 50%;
-  margin-top: 10%;
   margin-left: 25%;
 }
 
@@ -55,10 +54,13 @@ a {
 }
 
 .index {
-  height: 500px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 50px 0 rgba(0, 0, 0, 0.19);
 }
-
+.index::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 .reports {
   height: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 50px 0 rgba(0, 0, 0, 0.19);
@@ -71,13 +73,33 @@ a {
 .index div {
   width: 50%;
   float: left;
-  height: 500px;
 }
 
 .image {
   background-image: url("./assets/joshua.png");
   background-size: cover;
   background-position: center;
+  height: 500px;
+}
+
+@media only screen and (max-width: 1800px) {
+  .App {
+    text-align: center;
+    width: 100%;
+    margin-top: 5%;
+    margin-left: 0%;
+  }
+
+  .index {
+    margin-top: -1.5rem;
+    min-height: 700px;
+  }
+
+  .index div {
+    margin-top: 2%;
+    width: 50%;
+    float: left;
+  }
 }
 
 @media only screen and (max-width: 1167px) {
@@ -90,7 +112,7 @@ a {
 
   .index {
     margin-top: -1.5rem;
-    height: 700px;
+    min-height: 700px;
   }
 
   .index div {

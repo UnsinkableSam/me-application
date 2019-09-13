@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../../logo.svg";
 import "../../App.css";
 import "./Navbar.css";
 
@@ -12,6 +11,9 @@ function Navbar() {
         </li>
         <li id="2" className="nav-link">
           <a href="/reports/week/1">Reports</a>
+        </li>
+        <li id="2" className="nav-link">
+          <a href="/Register/register">Register</a>
         </li>
       </ul>
     </div>

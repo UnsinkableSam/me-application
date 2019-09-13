@@ -1,6 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import logo from "../../../logo.svg";
+
+//import logo from "../../../logo.svg";
 import "../../../App.css";
 import ReactMarkdown from "react-markdown";
 import MarkdownFile from "./../../../README.md";

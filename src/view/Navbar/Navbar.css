@@ -30,5 +30,9 @@ a :hover {
   color: white;
 }
 
-.Navbar {
+.dropdown-content {
+  display: none;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
 }

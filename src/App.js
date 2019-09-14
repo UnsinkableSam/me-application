@@ -2,6 +2,7 @@ import React from "react";
 //import logo from "./logo.svg";
 import "./App.css";
 import One from "./view/reports/week/1.js";
+import Two from "./view/reports/week/2.js";
 import Register from "./view/Register/register.js";
 import index from "./view/Home/index.js";
 import Navbar from "./view/Navbar/Navbar.js";
@@ -14,6 +15,7 @@ function App() {
         <Navbar />
         <Route path="/" exact component={index} />
         <Route path="/reports/week/1" component={One} />
+        <Route path="/reports/week/2" component={Two} />
         <Route path="/register" component={Register} />
       </div>
     </Router>

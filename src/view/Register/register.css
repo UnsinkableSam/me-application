@@ -17,6 +17,7 @@
   padding: 1rem;
   font-weight: bolder;
 }
+
 .btnSubmit {
   margin-top: 2rem;
   border: none;
@@ -123,7 +124,13 @@
 .grid-item:hover {
   background: white;
 }
+.exampleLabel {
+  margin-bottom: 2rem;
+}
 
+input:focus {
+  border: black 2px solid;
+}
 .scrollbar {
   background-color: #f5f5f5;
   float: left;
@@ -162,7 +169,12 @@ span:hover {
   font-weight: bold;
 }
 
-::placeholder {
+label {
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+}
+​ ::placeholder {
   color: black;
 }
 

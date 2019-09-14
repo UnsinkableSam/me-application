@@ -4,7 +4,6 @@ import "./register.css";
 import "../datepicker/dates.js";
 // import Dates from "../datepicker/dates.js";
 import DatesPicker from "../datepicker/datepicker.js";
-import { NONAME } from "dns";
 
 function Register() {
   const [isYear, setIsYear] = React.useState(2019);
@@ -22,7 +21,7 @@ function Register() {
   const [NameValidate, setNameValidate] = React.useState(true);
   const [PasswordValidate, setPasswordValidate] = React.useState(true);
   const [ErrorPassword, setErrorPassword] = React.useState(false);
-  const [ErrorEmail, setErrorEmail] = React.useState(false);
+  // const [ErrorEmail, setErrorEmail] = React.useState(false);
   const Days = DatesPicker(isYear, isMonth);
   const [PassConfirmError, setPassConfirmError] = React.useState(true);
   const re = RegExp(
@@ -80,6 +79,7 @@ function Register() {
         allyears.push(
           <div
             className="date"
+            key={index}
             onClick={() => {
               setIsYear(isYear - index);
               setIsStage(2);
@@ -147,7 +147,7 @@ function Register() {
   return (
     <div className="RegisterPage">
       <div className="container register-form">
-        <div className="form">
+        <div className="form-horizontal">
           <div className="note">
             <p>Register.</p>
           </div>
@@ -160,12 +160,12 @@ function Register() {
           <div className="form-content">
             <div className="row">
               <div className="col-md-6">
-                <div className="form-group">
+                <div className="Block">
+                  <label for="Name">Name:</label>
                   <input
                     type="text"
                     required
                     className="form-control"
-                    placeholder="Your Name *"
                     style={
                       NameValidate
                         ? { background: "Green" }
@@ -176,6 +176,8 @@ function Register() {
                     }}
                   />
                 </div>
+                <label className="exampleLabel">Example"Bengt"</label>
+
                 <h4
                   style={
                     ErrorPassword ? { display: "block" } : { display: "none" }
@@ -185,11 +187,11 @@ function Register() {
                   Email need to be something like "emailname@email.com"
                 </h4>
                 <div className="form-group">
+                  <label for="Email">Email:</label>
                   <input
                     type="Email"
                     required
                     className="form-control"
-                    placeholder="Email"
                     style={
                       EmailValidate
                         ? { background: "Green" }
@@ -200,7 +202,9 @@ function Register() {
                     }}
                   />
                 </div>
+                <label className="exampleLabel">Example"Ola@email.com"</label>
               </div>
+
               <h4
                 style={
                   ErrorPassword ? { display: "block" } : { display: "none" }
@@ -211,11 +215,12 @@ function Register() {
               </h4>
               <div className="col-md-6">
                 <div className="form-group">
+                  <label for="pwd">Password:</label>
                   <input
+                    name="pwd"
                     type="password"
                     required
                     className="form-control"
-                    placeholder="Your Password *"
                     style={
                       PasswordValidate
                         ? { background: "Green" }
@@ -225,6 +230,8 @@ function Register() {
                       setPassword(e.target.value);
                     }}
                   />
+                  <br></br>
+                  <label className="exampleLabel">More then 8 characters</label>
                 </div>
                 <h4
                   style={
@@ -237,11 +244,12 @@ function Register() {
                   Password confirmation needs to be the same as Password.
                 </h4>
                 <div className="form-group">
+                  <label for="pwd">Password again:</label>
                   <input
+                    name="pwd"
                     type="password"
                     required
                     className="form-control"
-                    placeholder="Confirm Password *"
                     style={
                       PassConfirmError
                         ? { background: "Green" }
@@ -252,6 +260,7 @@ function Register() {
                     }}
                   />
                 </div>
+
                 <h4>Birthdate</h4>
                 <div className="fullDate">
                   <span

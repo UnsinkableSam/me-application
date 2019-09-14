@@ -3,10 +3,17 @@ import React from "react";
 //import logo from "../../../logo.svg";
 import "../../../App.css";
 import ReactMarkdown from "react-markdown";
-import MarkdownFile from "./../../../README.md";
+import MarkdownFile1 from "./../../../README.md";
+import MarkdownFile2 from "./../../../kmom02.md";
 
-function One() {
+function One(Report) {
   const [markdown, setMarkdown] = React.useState("");
+  var MarkdownFile;
+  if (Report) {
+    MarkdownFile = MarkdownFile1;
+  } else {
+    MarkdownFile = MarkdownFile2;
+  }
 
   React.useEffect(() => {
     fetch(MarkdownFile)
@@ -16,7 +23,7 @@ function One() {
   return (
     <div className="reports">
       <a href="https://github.com/UnsinkableSam/me-application">
-        <i class="GithubIcon"></i> Github länk
+        <i className="GithubIcon"></i> Github länk
       </a>
       <ReactMarkdown source={markdown} />
     </div>

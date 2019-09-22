@@ -9,8 +9,9 @@ function Login() {
     const postLogin = (e) => {
         e.preventDefault();
         console.log("hello");
-
+        console.log(username);
         axios.post('https://me-api.sam-corp.me/login', {
+            
             username: username,
             password: password
         })

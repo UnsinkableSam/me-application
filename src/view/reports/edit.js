@@ -37,7 +37,7 @@ function Edit() {
         e.preventDefault();
         console.log(name);
         setUpdateFile(name);
-        axios.get('https://me-api.sam-corp.me/report/week/' + name)
+        axios.get('https://me-api.sam-corp.me/reports/week/' + name)
             .then((response) => {
                 console.log(response.data.filetext);
                 setresponseText(response.data.filetext);

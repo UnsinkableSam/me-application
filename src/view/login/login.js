@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import "../../App.css";
 import "./login.css";
 import axios from 'axios';
-function login() {
 
+function Login() {
+    const [username, setUsername] = React.useState("");
+    const [password, setPassword] = React.useState("");
     const postLogin = (e) => {
         e.preventDefault();
         console.log("hello");
 
         axios.post('https://me-api.sam-corp.me/login', {
-            username: "t@test.se",
-            password: "123"
+            username: username,
+            password: password
         })
             .then((response) => {
                 console.log(response.data);
@@ -30,11 +32,11 @@ function login() {
                             <h5 class="card-title text-center">Sign In</h5>
                             <form class="form-signin">
                                 <div class="form-label-group">
-                                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus/>
+                                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" onChange={(e) => { setUsername(e.target.value) }} required autofocus/>
                                         <label for="inputEmail">Email address</label>
                                     </div>
                                     <div class="form-label-group">
-                                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required/>
+                                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" onChange={(e) => {setPassword(e.target.value)}} required/>
                                         <label for="inputPassword">Password</label>
                                     </div>
                                 <button class="btn btn-lg btn-primary btn-block text-uppercase" onClick={postLogin} type="submit">Sign in</button>
@@ -47,4 +49,4 @@ function login() {
     );
 }
 
-export default login;
+export default Login;

@@ -16,7 +16,7 @@ function Create() {
         console.log("ASDG");
         console.log(filename);
         console.log(file);
-        axios.post('http://localhost:8333/addReports/',
+        axios.post('https://me-api.sam-corp.me/addReports/',
             {
                 filename: filename,
                 file: file
@@ -39,7 +39,7 @@ function Create() {
     const getFile = (e) => {
         e.preventDefault();
         
-        axios.get('http://localhost:8333/reports/markdowntest1')
+        axios.get('https://me-api.sam-corp.me/reports/markdowntest1')
             .then((response) => {
                 setresponseText(response);
                 

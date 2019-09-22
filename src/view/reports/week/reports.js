@@ -11,7 +11,7 @@ function Reports(props) {
  
     useEffect(() => {
         let { id } = props.match.params
-        axios.get('http://localhost:8333/reportHtml/' + id)
+        axios.get('https://me-api.sam-corp.me/reportHtml/' + id)
             .then((response) => {
                 setText(response.data);
 

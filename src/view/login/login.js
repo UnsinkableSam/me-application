@@ -8,7 +8,7 @@ function login() {
         e.preventDefault();
         console.log("hello");
 
-        axios.post('http://localhost:8333/login', {
+        axios.post('https://me-api.sam-corp.me/login', {
             username: "t@test.se",
             password: "123"
         })

@@ -3,7 +3,7 @@ import "../../App.css";
 import "./create.css";
 import { Markdown } from 'react-showdown';
 import Popup from "reactjs-popup";
-import Login from "../login/login.js"
+import Login from "../login/Login.js"
 import axios from 'axios';
 import { Redirect } from 'react-router'
 function Create() {

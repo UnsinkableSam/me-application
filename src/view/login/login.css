@@ -1,0 +1,18 @@
+.modal {
+  font-size: 12px;
+  width: 10.3rem;
+  text-align: left;
+}
+
+.form-control {
+    width: 100%;
+}
+
+label {
+    text-align:left;
+    padding-bottom: 1rem;
+}
+
+::placeholder {
+  color:black;
+}

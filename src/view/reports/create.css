@@ -1,0 +1,28 @@
+.create {
+    
+  margin-top: 5%;
+  
+    
+    
+}
+
+.create label {
+
+}
+
+.create input {
+    border:green 2px solid;
+    background:white;
+    margin: 1rem;
+    width: 20%;
+
+}
+
+
+.create textarea {
+    border:green 2px solid;
+    background:white;
+    margin: 1rem;
+    width: 20%;
+
+}

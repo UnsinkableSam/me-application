@@ -4,7 +4,8 @@ import "./register.css";
 import "../datepicker/dates.js";
 // import Dates from "../datepicker/dates.js";
 import DatesPicker from "../datepicker/datepicker.js";
-
+import axios from 'axios';
+import { Redirect } from 'react-router'
 function Register() {
   const [isYear, setIsYear] = React.useState(2019);
   const [isMonth, setIsMonth] = React.useState(0);
@@ -13,7 +14,9 @@ function Register() {
   const [isDisplayedYear, setisDisplayedYear] = React.useState(false);
   const [isDisplayedMonth, setisDisplayedMonth] = React.useState(true);
   const [isDisplayedDay, setisDisplayedDay] = React.useState(false);
+  // eslint-disable-next-line 
   const [email, setEmail] = React.useState("");
+  // eslint-disable-next-line 
   const [name, setName] = React.useState("");
   const [Password, setPassword] = React.useState("");
   const [ConfirmPassword, setConfirmPassword] = React.useState("");
@@ -23,9 +26,10 @@ function Register() {
   const [ErrorPassword, setErrorPassword] = React.useState(false);
   // const [ErrorEmail, setErrorEmail] = React.useState(false);
   const Days = DatesPicker(isYear, isMonth);
+  const [redirect, setRedirect] = React.useState(false);
   const [PassConfirmError, setPassConfirmError] = React.useState(true);
   const re = RegExp(
-    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   );
   const reName = RegExp(/^[a-zA-Z ]+$/);
   const Months = [
@@ -42,6 +46,26 @@ function Register() {
     "November",
     "December"
   ];
+
+  const registerApi = (e) => {
+    console.log("lol");
+    
+   axios.post('http://localhost:1337/register/', {
+        username: email, 
+        password: Password,
+        name: name,
+        birth: isYear + "/" + isMonth + "/" + isDay
+    })
+      .then((response) => {
+        console.log(response);
+        setRedirect(true);
+      }, (error) => {
+        console.log(error);
+      });
+
+  }
+
+  // eslint-disable-next-line 
   function checkEmail(email) {
     if (email.match(re)) {
       setEmailValidate(true);
@@ -49,7 +73,7 @@ function Register() {
       setEmailValidate(false);
     }
   }
-
+// eslint-disable-next-line 
   function checkName(name) {
     if (name.match(reName)) {
       setNameValidate(true);
@@ -57,7 +81,7 @@ function Register() {
       setNameValidate(false);
     }
   }
-
+// eslint-disable-next-line 
   function checkPassword(Password) {
     if (Password.length > 7) {
       setPasswordValidate(true);
@@ -66,7 +90,7 @@ function Register() {
       setPasswordValidate(false);
     }
   }
-
+// eslint-disable-next-line 
   function CheckconfirmPassword() {
     if (Password === ConfirmPassword) {
       setPassConfirmError(false);
@@ -145,7 +169,9 @@ function Register() {
   }
 
   return (
+    
     <div className="RegisterPage">
+      {redirect ? <Redirect to='/' />: null } 
       <div className="container register-form">
         <div className="form-horizontal">
           <div className="note">
@@ -333,10 +359,12 @@ function Register() {
               type="button"
               className="btnSubmit"
               onClick={() => {
-                checkPassword(Password);
-                checkName(name);
-                checkEmail(email);
-                CheckconfirmPassword();
+                // checkPassword(Password);
+                // checkName(name);
+                // checkEmail(email);
+                // CheckconfirmPassword();
+                registerApi();
+                
               }}
             >
               Submit

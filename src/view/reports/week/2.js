@@ -4,7 +4,8 @@ import React from "react";
 import "../../../App.css";
 import One from "./1.js";
 
-function Two() {
+function Two(props) {
+  console.log(props);
   return <div>{One(false)};</div>;
 }
 

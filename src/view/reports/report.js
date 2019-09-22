@@ -2,7 +2,7 @@ import React from "react";
 import "../../App.css";
 
 import Popup from "reactjs-popup";
-import Login from "../login/login.js";
+import Login from "../login/Login.js";
 import Create from "./create.js";
 import Edit from "./edit.js";
 function Report() {

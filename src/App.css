@@ -97,12 +97,11 @@ a {
   }
 
   .index {
-    margin-top: -1.5rem;
+    
     min-height: 700px;
   }
 
   .index div {
-    margin-top: 2%;
     width: 50%;
     float: left;
   }
@@ -117,8 +116,8 @@ a {
   }
 
   .index {
-    margin-top: -1.5rem;
     min-height: 700px;
+    box-shadow: none;
   }
 
   .index div {

@@ -50,7 +50,7 @@ function Register() {
   const registerApi = (e) => {
     console.log("lol");
     
-   axios.post('http://localhost:1337/register/', {
+   axios.post('http://localhost:8333/register/', {
         username: email, 
         password: Password,
         name: name,

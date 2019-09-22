@@ -16,7 +16,7 @@ function Edit() {
    
     const Update = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:1337/updateReports/', {
+        axios.post('http://localhost:8333/updateReports/', {
             filename: updateFile,
             file: updateNewFile
         }, {
@@ -37,7 +37,7 @@ function Edit() {
         e.preventDefault();
         console.log(name);
         setUpdateFile(name);
-        axios.get('http://localhost:1337/report/week/' + name)
+        axios.get('http://localhost:8333/report/week/' + name)
             .then((response) => {
                 console.log(response.data.filetext);
                 setresponseText(response.data.filetext);
@@ -51,7 +51,7 @@ function Edit() {
     console.log(localStorage.getItem("token"));
 
     useEffect(()  => {
-        axios.get('http://localhost:1337/reports/')
+        axios.get('http://localhost:8333/reports/')
             .then((response) => {
                 let textnames = [];
                 console.log(response.data[0].filename);

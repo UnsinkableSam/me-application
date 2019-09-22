@@ -14,7 +14,7 @@ function Navbar() {
 
   const createLink = <Link to={"/reports/report"} >Create/edit reports</Link>;
   useEffect(() => {
-    axios.get('http://localhost:1337/reports/')
+    axios.get('http://localhost:8333/reports/')
       .then((response) => {
         let textnames = [];
         console.log(response.data[0].filename);
@@ -44,10 +44,10 @@ function Navbar() {
             <div className="dropdown-content">
               
               
-              <Link to={"/reports/week/1"}>Report 1</Link>
-              <Link to={"/reports/week/2"}>Report 2</Link>
+              {/* <Link to={"/reports/week/1"}>Report 1</Link>
+              <Link to={"/reports/week/2"}>Report 2</Link> */}
               {/* <Link to={{ path:"/reports/week/reports", state: { "page": "hello"}}}  >Report 3</Link> */}
-              <Link to={"/reports/week/reports/lol"}>Report 3</Link>
+              {/* <Link to={"/reports/week/reports/lol"}>Report 3</Link> */}
               {responseName}
             </div>
           </div>{" "}

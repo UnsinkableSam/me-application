@@ -9,7 +9,7 @@ function Navbar() {
   const [responseName, setresponseName] = React.useState("");
   const reggi = <Link to={"/Register/register/"} >Register</Link>;
   const loggi = <Popup trigger={<a > Login</a>} position="bottom center">
-    {Login}
+    {Login()}
   </Popup>;
 
   const createLink = <Link to={"/reports/report"} >Create/edit reports</Link>;

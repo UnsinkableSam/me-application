@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import "../../App.css";
 import "./Navbar.css";
 import Popup from "reactjs-popup";
-import Login from "../login/login.js"
+import Login from "../login/Login.js"
 import axios from 'axios';
 function Navbar() {
   const [responseName, setresponseName] = React.useState("");

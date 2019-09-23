@@ -14,8 +14,8 @@ let browser;
 test.describe("Me-application", function () {
     test.beforeEach(function (done) {
         this.timeout(20000);
-        browser = new webdriver.Builder().
-            withCapabilities(webdriver.Capabilities.firefox()).build();
+        browser = new webdriver.Builder()
+        .withCapabilities(webdriver.Capabilities.firefox()).build();
 
         browser.get("http://localhost:3000/");
         done();
@@ -70,11 +70,7 @@ test.describe("Me-application", function () {
 
 
     test.it("Test index", function (done) {
-        let promise = browser.getTitle();
-
-        promise.then(function (title) {
-            assert.equal(title, "Me-applikation");
-        });
+        
 
         browser.getTitle().then(function (title) {
  

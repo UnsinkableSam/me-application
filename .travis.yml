@@ -1,7 +1,4 @@
-install:
-- "wget https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-linux64.tar.gz"
-- "tar -xzf geckodriver-v0.20.0-linux64.tar.gz"
-- "export PATH=$(pwd)/bin:$PATH"
+
 language: node_js
 
 node_js:
@@ -18,3 +15,8 @@ after_success:
     - npm run report-coveralls
     - npm run report-codecov
 
+before_install:
+  - wget https://github.com/mozilla/geckodriver/releases/download/v0.25.0/geckodriver-v0.25.0-linux32.tar.gz
+  - mkdir geckodriver
+  - tar -xzf geckodriver-v0.20.1-linux64.tar.gz -C geckodriver
+  - export PATH=$PATH:$PWD/geckodriver

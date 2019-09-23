@@ -4,5 +4,3 @@ build:
       tests:
         override:
           - command: npm test 
-            coverage:
-              

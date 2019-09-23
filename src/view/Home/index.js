@@ -2,6 +2,7 @@ import React from "react";
 import "../../App.css";
 
 function index() {
+  
   return (
     <div className="index">
       <div>

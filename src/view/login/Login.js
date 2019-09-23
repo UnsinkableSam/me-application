@@ -10,7 +10,7 @@ function Login() {
         e.preventDefault();
         console.log("hello");
         console.log(username);
-        axios.post('https://me-api.sam-corp.me/login', {
+        axios.post('http://localhost:1337/login', {
             
             username: username,
             password: password

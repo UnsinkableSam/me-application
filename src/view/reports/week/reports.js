@@ -18,6 +18,7 @@ function Reports(props) {
             }, (error) => {
                 console.log(error);
             });
+            // eslint-disable-next-line
     }, [id]);
     
     // return <div>{getFile(props)};</div>;

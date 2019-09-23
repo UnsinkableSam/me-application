@@ -1,12 +1,9 @@
-import React from "react";
+// eslint-disable-next-line
+import React, { useState, useEffect } from 'react';
 import "../../App.css";
-
-import Popup from "reactjs-popup";
-import Login from "../login/Login.js";
 import Create from "./create.js";
 import Edit from "./edit.js";
 function Report() {
-    console.log("hello");
     const [createFile, setCreateFile] = React.useState(false);
     const [editFile, setEditFile] = React.useState(false);
     return (

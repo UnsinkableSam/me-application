@@ -1,14 +1,13 @@
-import React from "react";
+// eslint-disable-next-line
+import React, { useState, useEffect } from 'react';
 import "../../App.css";
 import "./create.css";
-import { Markdown } from 'react-showdown';
-import Popup from "reactjs-popup";
-import Login from "../login/Login.js"
 import axios from 'axios';
 import { Redirect } from 'react-router'
 function Create() {
     const [filename, setFilename] = React.useState("");
     const [file, setFile] = React.useState("");
+    // eslint-disable-next-line
     const [responseText, setresponseText] = React.useState("");
     const [redirect, setRedirect] = React.useState(false);
     const postFile = (e) => {
@@ -36,18 +35,18 @@ function Create() {
 
     }
 
-    const getFile = (e) => {
-        e.preventDefault();
+    // const getFile = (e) => {
+    //     e.preventDefault();
         
-        axios.get('https://me-api.sam-corp.me/reports/markdowntest1')
-            .then((response) => {
-                setresponseText(response);
+    //     axios.get('https://me-api.sam-corp.me/reports/markdowntest1')
+    //         .then((response) => {
+    //             setresponseText(response);
                 
-            }, (error) => {
-                console.log(error);
-            });
+    //         }, (error) => {
+    //             console.log(error);
+    //         });
 
-    }
+    // }
     return (
         <form className="create">
             {redirect ? <Redirect to="/" /> : null} 

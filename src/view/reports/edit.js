@@ -1,9 +1,7 @@
+// eslint-disable-next-line
 import React, { useState, useEffect } from 'react';
 import "../../App.css";
 import "./create.css";
-import { Markdown } from 'react-showdown';
-import Popup from "reactjs-popup";
-import Login from "../login/Login.js"
 import axios from 'axios';
 import { Redirect } from 'react-router'
 

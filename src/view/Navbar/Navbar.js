@@ -1,13 +1,16 @@
+// eslint-disable-next-line
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
 import "../../App.css";
 import "./Navbar.css";
 import Popup from "reactjs-popup";
 import Login from "../login/Login.js"
 import axios from 'axios';
 function Navbar() {
+  // eslint-disable-next-line 
   const [responseName, setresponseName] = React.useState("");
   const reggi = <Link to={"/Register/register/"} >Register</Link>;
+  // eslint-disable-next-line 
   const loggi = <Popup trigger={<a > Login</a>} position="bottom center">
     {Login()}
   </Popup>;

@@ -1,16 +1,9 @@
-
-language: node_js
-
-node_js:
-    - "10"
-
-sudo: false
-
-git:
-    submodules: false
-
-before_script:
-    - npm install
-
-script:
-    - npm run build
+build:
+  nodes:
+    coverage:
+      tests:
+        override:
+          - command: npm run test:ci
+            coverage:
+              file: coverage/redovisa/clover.xml
+              format: clover

@@ -3,4 +3,4 @@ build:
     coverage:
       tests:
         override:
-          - command: 
+          - command: npm test

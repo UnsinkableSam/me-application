@@ -2,19 +2,15 @@
 language: node_js
 
 node_js:
-    - "node"
-    - "8"
-    - "7"
+    - "10"
 
 sudo: false
 
 git:
     submodules: false
 
-after_success:
-    - npm run report-coveralls
-    - npm run report-codecov
+before_script:
+    - npm install
 
-before_install:
-   - wget https://github.com/mozilla/geckodriver/releases/download/v0.21.0/geckodriver-v0.21.0-linux32.tar.gz
-   - tar -xzf geckodriver-v0.21.0-linux32.tar.gz
+script:
+    - npm run build

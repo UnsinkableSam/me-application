@@ -16,7 +16,7 @@ function Create() {
         console.log("ASDG");
         console.log(filename);
         console.log(file);
-        axios.post('https://me-api.sam-corp.me/addReports/',
+        axios.post('https://me-api.sam-corp.me/reports',
             {
                 filename: filename,
                 file: file

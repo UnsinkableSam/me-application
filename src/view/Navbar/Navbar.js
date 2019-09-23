@@ -14,7 +14,7 @@ function Navbar() {
 
   const createLink = <Link to={"/reports/report"} >Create/edit reports</Link>;
   useEffect(() => {
-    axios.get('https://me-api.sam-corp.me/reports/')
+    axios.get('https://me-api.sam-corp.me/reports/names')
       .then((response) => {
         let textnames = [];
         response.data.forEach(element => {

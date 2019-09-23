@@ -51,7 +51,7 @@ function Edit() {
     console.log(localStorage.getItem("token"));
 
     useEffect(()  => {
-        axios.get('https://me-api.sam-corp.me/reports/')
+        axios.get('https://me-api.sam-corp.me/reports/names')
             .then((response) => {
                 let textnames = [];
                 console.log(response.data[0].filename);

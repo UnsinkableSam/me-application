@@ -33,7 +33,6 @@ function Navbar() {
         <li id="1" className="nav-link">
           <Link to={"/"}>Index</Link>
         </li>
-        <li id="2" className="nav-link"></li>
         <li>
           {" "}
           <div className="dropdown">
@@ -54,11 +53,11 @@ function Navbar() {
           {/* <Link to={"/Register/register/"} >Register</Link> */}
           {localStorage.getItem("token") === null ? reggi : null }
         </li>
-        <li id="2" className="nav-link">
+        <li id="3" className="nav-link">
           
           {localStorage.getItem("token") === null ? loggi : null}
         </li>
-        <li id="2" className="nav-link">
+        <li id="4" className="nav-link">
 
           {localStorage.getItem("token") === null ? null : createLink}
         </li>

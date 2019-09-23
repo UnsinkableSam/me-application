@@ -175,7 +175,7 @@ function Register() {
       <div className="container register-form">
         <div className="form-horizontal">
           <div className="note">
-            <p>Register.</p>
+            <h1>Register</h1>
           </div>
           <h4
             style={ErrorPassword ? { display: "block" } : { display: "none" }}

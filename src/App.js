@@ -19,7 +19,7 @@ function App(props) {
         <Route path="/reports/report" component={report} />
         <Route path="/reports/week/1" component={One} />
         <Route path="/reports/week/2" component={Two} />
-        <Route path="/reports/week/reports/:id" component={Reports} />
+        <Route path="/reports/week/:id" component={Reports} />
         <Route path="/register" component={Register} />
       </div>
     </Router>

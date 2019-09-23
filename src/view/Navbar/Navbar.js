@@ -17,10 +17,8 @@ function Navbar() {
     axios.get('https://me-api.sam-corp.me/reports/')
       .then((response) => {
         let textnames = [];
-        console.log(response.data[0].filename);
         response.data.forEach(element => {
-          textnames.push(<Link to={"/reports/week/reports/" + element.filename}>{element.filename}</Link>
-          // <a value={element.filename}>{element.filename}</a>
+          textnames.push(<Link to={"/reports/week/" + element.filename}>{element.filename}</Link>
           );
         });
         setresponseName(textnames);

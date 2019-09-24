@@ -23,6 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "mocha --timeout 35000 ./test/*.js",
+    "test:ci": "npm test --watch=false",
     "eject": "react-scripts eject",
     "stop": "taskkill -F -IM node.exe"
   },

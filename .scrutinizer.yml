@@ -3,7 +3,7 @@ build:
     coverage:
       tests:
         before:
-            - command: npm start
+            - command: start
               background: true
         override:
-          - command: npm test
+          - command: test

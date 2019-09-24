@@ -7,3 +7,4 @@ build:
               background: true
         override:
             - command: npm test
+            - js-scrutinizer-run

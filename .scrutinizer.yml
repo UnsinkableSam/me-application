@@ -2,5 +2,8 @@ build:
   nodes:
     coverage:
       tests:
+      before:
+          - command: npm start
+            background: true
         override:
-          - command: npm test
+          - command: npm test:ci

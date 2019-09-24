@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.org/UnsinkableSam/me-application.svg?branch=master)](https://travis-ci.org/UnsinkableSam/me-application)
+[![Build Status](https://scrutinizer-ci.com/g/UnsinkableSam/me-application/badges/build.png?b=master)](https://scrutinizer-ci.com/g/UnsinkableSam/me-application/build-status/master)
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

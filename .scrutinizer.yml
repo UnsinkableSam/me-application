@@ -6,4 +6,4 @@ build:
             - command: start
               background: true
         override:
-          - command: test
+            - command: test

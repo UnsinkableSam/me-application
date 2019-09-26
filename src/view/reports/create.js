@@ -15,7 +15,7 @@ function Create() {
         console.log("ASDG");
         console.log(filename);
         console.log(file);
-        axios.post('http://localhost:1337/reports',
+        axios.post('https://me-api.sam-corp.me/reports',
             {
                 filename: filename,
                 file: file

@@ -49,9 +49,10 @@ function Register() {
 
   const registerApi = (e) => {
     console.log("lol");
-    
-   axios.post('https://me-api.sam-corp.me/register/', {
-        username: email, 
+    console.log(Password);
+    axios.post('https://me-api.sam-corp.me/register/', {
+     
+        email: email, 
         password: Password,
         name: name,
         birth: isYear + "/" + isMonth + "/" + isDay

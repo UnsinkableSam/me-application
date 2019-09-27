@@ -12,7 +12,6 @@ function Create() {
     const [redirect, setRedirect] = React.useState(false);
     const postFile = (e) => {
         e.preventDefault();
-        console.log("ASDG");
         console.log(filename);
         console.log(file);
         axios.post('https://me-api.sam-corp.me/reports',

@@ -64,7 +64,9 @@ function Navbar() {
 
           {localStorage.getItem("token") === null ? null : createLink}
         </li>
-        
+        <li id="1" className="nav-link">
+          <Link to={"/Chat"}>Chat</Link>
+        </li>
       </ul>
       
     </div>

@@ -54,7 +54,7 @@ function Chat() {
             let joinDate = new Date();
             let sendJson = {
                 "username": username,
-                "date": joinDate,
+                "date": joinDate.toLocaleString(),
                 "message": "Just joined"
             }
             socket.emit("joined", sendJson);
@@ -68,7 +68,7 @@ function Chat() {
             <h2>Messages:</h2>
             <div id="all-messages" class="all-messages">
                 {allMessages.map(function(item, key){
-                    let time = item.date.toLocaleString();
+                    let time = item.date;
                     return <p class="message" key={key}> {item.username}: {item.message} , {time}</p>
                     })
                 }

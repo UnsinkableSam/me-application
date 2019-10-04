@@ -55,7 +55,7 @@ function Chat() {
             let sendJson = {
                 "username": "Server",
                 "date": joinDate.toLocaleString(),
-                "message": username + "Just joined" 
+                "message": username + " Just joined" 
             }
             socket.emit("joined", sendJson);
         }

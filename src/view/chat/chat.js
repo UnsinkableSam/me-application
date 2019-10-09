@@ -15,6 +15,12 @@ function Chat() {
         
         socket.on('connect', function () {
             console.info("Connected");
+            socket.on("load", function (res) {
+                console.log(res);
+                console.log("hello");
+                setAllMessages(res);
+            });
+            
             socket.on("chat message", function (messagesJson) {
                 console.log(messagesJson);
                 setResponse(messagesJson);

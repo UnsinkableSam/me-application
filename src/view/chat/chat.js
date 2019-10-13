@@ -35,7 +35,7 @@ function Chat() {
                 console.info("Disconnected")
             })
         }
-    }, [])
+    }, [username])
     
 
 

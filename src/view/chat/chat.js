@@ -2,8 +2,8 @@ import io from 'socket.io-client';
 import React, { useState, useEffect } from 'react';
 import "./chat.css";
 
+let socket = io("http://localhost:4000");
 
-const socket = io("http://localhost:4000");
 function Chat() {
     const [message, setMessage] = React.useState("");
     const [allMessages, setAllMessages] = React.useState([]);
@@ -11,8 +11,13 @@ function Chat() {
     const [displayInput, setDisplayInput] = React.useState(true);
     const [allJsonMessages, setAllJsonMessages] = React.useState([]);
     const [response, setResponse] = React.useState([]);
+
     React.useEffect(() => {
-        
+        socket = io("http://localhost:4000");
+    },[])
+
+    React.useEffect(() => {
+        console.log("HELLO BARBIE");
         socket.on('connect', function () {
             console.info("Connected");
             socket.on("load", function (res) {
@@ -22,12 +27,8 @@ function Chat() {
             });
             
             socket.on("chat message", function (messagesJson) {
-                console.log(messagesJson);
                 setResponse(messagesJson);
                 setAllMessages(allMessages => ([...allMessages, messagesJson]));
-                // messagesJson.forEach(element => {
-                //         setAllJsonMessages(allJsonMessages => ([...allJsonMessages, element]));
-                //     });
             });
         })
         return () => {
@@ -41,6 +42,7 @@ function Chat() {
 
     const onKeyPress = (event) => {
         if (event.key === 'Enter') {
+
             let newDate = new Date();
             let sendJson = {
                             "username": username, 
